@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript para Iniciantes: Interatividade na Web</title>
+    <link rel="stylesheet" href="cs.css">
+    
+</head>
+<body>
+
+<header>
+    <h1>JavaScript para Iniciantes</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <p>Adicionando interatividade às suas páginas web</p>
+</header>
+
+<main>
+    <section>
+        <h2>O que é JavaScript?</h2>
+        <p>
+            JavaScript é uma linguagem de programação que permite adicionar interatividade a páginas web. Com ele, você pode responder a eventos, validar formulários, atualizar conteúdos dinamicamente, criar animações, entre outras funcionalidades.
+        </p>
+    </section>
+
+    <section>
+        <h2>Como adicionar JavaScript a uma página?</h2>
+        <p>Você pode inserir JavaScript diretamente no HTML, usando a tag <code>&lt;script&gt;</code>, ou referenciar arquivos externos.</p>
+        <pre><code>&lt;script&gt;
+    alert("Olá, mundo!");
+&lt;/script&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>Variáveis e Tipos de Dados</h2>
+        <p>Use <code>let</code>, <code>const</code> ou <code>var</code> para declarar variáveis:</p>
+        <pre><code>let nome = "João";
+const idade = 25;
+var ativo = true;</code></pre>
+    </section>
+
+    <section>
+        <h2>Funções</h2>
+        <p>Funções são blocos de código reutilizáveis:</p>
+        <pre><code>function saudacao(nome) {
+    return "Olá, " + nome + "!";
+}
+
+console.log(saudacao("Maria"));</code></pre>
+    </section>
+
+    <section>
+        <h2>Eventos e DOM</h2>
+        <p>Você pode capturar eventos do usuário e modificar elementos HTML com JavaScript.</p>
+        <pre><code>document.getElementById("meuBotao").addEventListener("click", function() {
+    alert("Botão clicado!");
+});</code></pre>
+    </section>
+
+    <section>
+        <h2>Exercício Prático</h2>
+        <p>Tente criar uma página com um botão que muda o texto de um parágrafo quando clicado.</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Catálogo de Tutoriais. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

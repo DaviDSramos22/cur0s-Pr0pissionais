@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lista Completa de Tutoriais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+        header, footer {
+            background-color: #004080;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .busca-filtros {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .busca-filtros label {
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            min-width: 200px;
+        }
+        .tutorial-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .tutorial-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+            border-left: 8px solid #004080;
+            transition: background-color 0.3s ease;
+        }
+        .tutorial-item:hover {
+            background-color: #f0f8ff;
+        }
+        .tutorial-titulo {
+            margin: 0 0 10px 0;
+            color: #004080;
+        }
+        .categoria {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .descricao {
+            line-height: 1.6;
+        }
+        .btn-ver-mais {
+            margin-top: 15px;
+            display: inline-block;
+            background-color: #004080;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-ver-mais:hover {
+            background-color: #002952;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Catálogo de Tutoriais - Aprenda Desenvolvimento Web</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="busca-filtros">
+    <div>
+        <label for="campoBusca">Buscar tutorial:</label><br />
+        <input type="text" id="campoBusca" placeholder="Digite palavras-chave..." />
+    </div>
+    <div>
+        <label for="filtroCategoria">Filtrar por categoria:</label><br />
+        <select id="filtroCategoria">
+            <option value="todos">Todos</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="frameworks">Frameworks</option>
+            <option value="banco-de-dados">Banco de Dados</option>
+            <option value="versionamento">Versionamento</option>
+        </select>
+    </div>
+</section>
+
+<section class="tutorial-lista" id="listaTutoriais">
+
+    <article class="tutorial-item" data-categoria="html" data-titulo="Introdução ao HTML e sua importância">
+        <h2 class="tutorial-titulo">Introdução ao HTML e sua importância</h2>
+        <div class="categoria">Categoria: HTML</div>
+        <p class="descricao">
+            Neste tutorial, você aprenderá o que é HTML, sua história, sua importância no desenvolvimento web e como ele estrutura o conteúdo das páginas. Abordaremos a sintaxe básica, as tags principais e como escrever um documento HTML simples. Ideal para quem nunca teve contato com HTML e quer começar do zero.
+            <br /><br />
+            Além disso, explicaremos conceitos fundamentais como a diferença entre linguagens de marcação e linguagens de programação, boas práticas para nomear arquivos e pastas, e a importância da semântica para acessibilidade e SEO.
+        </p>
+        <a href="Introdução ao HTML e sua importância.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="css" data-titulo="CSS Básico: Estilizando suas páginas web">
+        <h2 class="tutorial-titulo">CSS Básico: Estilizando suas páginas web</h2>
+        <div class="categoria">Categoria: CSS</div>
+        <p class="descricao">
+            Aprenda os conceitos fundamentais de CSS (Cascading Style Sheets), que permite controlar a apresentação visual de páginas HTML. Este tutorial aborda desde a inclusão do CSS no HTML até as principais propriedades para formatar texto, cores, caixas, margens e layouts básicos.
+            <br /><br />
+            Você também verá como funciona a cascata, herança e especificidade das regras CSS, entendendo como aplicar estilos de forma eficiente e evitar conflitos. Inclui exemplos práticos e exercícios para praticar o que aprendeu.
+        </p>
+        <a href="CSS Básico.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="javascript" data-titulo="JavaScript para Iniciantes: Interatividade na web">
+        <h2 class="tutorial-titulo">JavaScript para Iniciantes: Interatividade na web</h2>
+        <div class="categoria">Categoria: JavaScript</div>
+        <p class="descricao">
+            Descubra como adicionar interatividade às suas páginas web usando JavaScript, a linguagem de programação que roda no navegador. Este tutorial explica variáveis, tipos de dados, funções, eventos, manipulação do DOM (Document Object Model) e controle de fluxo.
+            <br /><br />
+            Também exploraremos como validar formulários, responder a cliques e atualizações dinâmicas de conteúdo. Perfeito para quem quer transformar páginas estáticas em experiências dinâmicas para os usuários.
+        </p>
+        <a href="javascript-basico.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="frontend" data-titulo="Frameworks Frontend: React, Vue e Angular">
+        <h2 class="tutorial-titulo">Frameworks Frontend: React, Vue e Angular</h2>
+        <div class="categoria">Categoria: Frontend</div>
+        <p class="descricao">
+            Neste tutorial, você conhecerá os três frameworks mais populares para desenvolvimento frontend: React, Vue.js e Angular. Entenda a filosofia de cada um, quando usar, vantagens e desvantagens, além de como iniciar um projeto básico com cada framework.
+            <br /><br />
+            Analisaremos os conceitos de componentes, estado, roteamento e comunicação entre componentes, ajudando você a escolher a melhor ferramenta para o seu projeto.
+        </p>
+        <a href="frameworks-frontend.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="backend" data-titulo="Backend com Node.js: Criando seu primeiro servidor">
+        <h2 class="tutorial-titulo">Backend com Node.js: Criando seu primeiro servidor</h2>
+        <div class="categoria">Categoria: Backend</div>
+        <p class="descricao">
+            Aprenda como criar um servidor backend simples usando Node.js, uma plataforma que permite executar JavaScript fora do navegador. Você verá como configurar o ambiente, criar rotas, responder a requisições HTTP e servir arquivos estáticos.
+            <br /><br />
+            Também abordaremos o uso do Express.js, framework que facilita a criação de APIs, e mostraremos exemplos de integração com banco de dados para armazenar e recuperar informações.
+        </p>
+        <a href="nodejs-backend.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="banco-de-dados" data-titulo="Introdução a Banco de Dados: MySQL e MongoDB">
+        <h2 class="tutorial-titulo">Introdução a Banco de Dados: MySQL e MongoDB</h2>
+        <div class="categoria">Categoria: Banco de Dados</div>
+        <p class="descricao">
+            Conheça os dois principais tipos de banco de dados usados no desenvolvimento web: relacionais (MySQL) e não relacionais (MongoDB). Entenda conceitos básicos como tabelas, documentos, CRUD (Create, Read, Update, Delete) e consultas.
+            <br /><br />
+            Aprenda a instalar, configurar e fazer operações básicas em ambos, e saiba quando escolher cada um para seu projeto.
+        </p>
+        <a href="banco-de-dados.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="versionamento" data-titulo="Controle de Versão com Git e GitHub">
+        <h2 class="tutorial-titulo">Controle de Versão com Git e GitHub</h2>
+        <div class="categoria">Categoria: Versionamento</div>
+        <p class="descricao">
+            Aprenda como controlar versões do seu código utilizando Git, um sistema de controle distribuído, e GitHub, plataforma para hospedagem e colaboração. Abordaremos comandos básicos como commit, branch, merge, pull e push.
+            <br /><br />
+            Este tutorial também explica como trabalhar colaborativamente, resolver conflitos e usar boas práticas no controle de versão, essenciais para qualquer desenvolvedor moderno.
+        </p>
+        <a href="git-github.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="css" data-titulo="Layout Responsivo com CSS Flexbox e Grid">
+        <h2 class="tutorial-titulo">Layout Responsivo com CSS Flexbox e Grid</h2>
+        <div class="categoria">Categoria: CSS</div>
+        <p class="descricao">
+            Neste tutorial, você aprenderá técnicas modernas para construir layouts flexíveis e responsivos com CSS Flexbox e CSS Grid. Entenda como posicionar elementos, distribuir espaço, alinhar e organizar o conteúdo para diferentes tamanhos de tela.
+            <br /><br />
+            Inclui exemplos práticos e comparações entre Flexbox e Grid para você escolher a melhor abordagem para seu projeto.
+        </p>
+        <a href="css-flexbox-grid.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="javascript" data-titulo="JavaScript Avançado: Promises, Async/Await e APIs">
+        <h2 class="tutorial-titulo">JavaScript Avançado: Promises, Async/Await e APIs</h2>
+        <div class="categoria">Categoria: JavaScript</div>
+        <p class="descricao">
+            Explore conceitos avançados de JavaScript, como programação assíncrona com Promises e Async/Await. Veja como consumir APIs REST usando fetch e axios, tratar erros e melhorar a performance das suas aplicações.
+            <br /><br />
+            Este tutorial é recomendado para quem já conhece o básico de JavaScript e quer dar o próximo passo para construir aplicações mais robustas.
+        </p>
+        <a href="js-avancado.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="frontend" data-titulo="Acessibilidade na Web: Criando sites para todos">
+        <h2 class="tutorial-titulo">Acessibilidade na Web: Criando sites para todos</h2>
+        <div class="categoria">Categoria: Frontend</div>
+        <p class="descricao">
+            Acessibilidade é fundamental para garantir que pessoas com deficiências possam navegar e usar seu site sem dificuldades. Aprenda técnicas para melhorar a navegação por teclado, uso correto de ARIA, contraste de cores, descrição de imagens e muito mais.
+            <br /><br />
+            Seguindo este tutorial, você torna seu conteúdo mais inclusivo e melhora a experiência para todos os usuários, além de atender requisitos legais em muitos países.
+        </p>
+        <a href="acessibilidade-web.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="backend" data-titulo="Segurança em Aplicações Web">
+        <h2 class="tutorial-titulo">Segurança em Aplicações Web</h2>
+        <div class="categoria">Categoria: Backend</div>
+        <p class="descricao">
+            Conheça os principais riscos de segurança em aplicações web, como injeção de SQL, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF) e ataques de força bruta. Veja como implementar boas práticas para proteger seu site e seus usuários.
+            <br /><br />
+            Inclui dicas sobre autenticação, criptografia, uso correto de cookies e headers de segurança.
+        </p>
+        <a href="seguranca-web.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <article class="tutorial-item" data-categoria="frameworks" data-titulo="Introdução ao Next.js: React com Server-Side Rendering">
+        <h2 class="tutorial-titulo">Introdução ao Next.js: React com Server-Side Rendering</h2>
+        <div class="categoria">Categoria: Frameworks</div>
+        <p class="descricao">
+            Next.js é um framework React que permite renderização no servidor (SSR) e geração estática de páginas, melhorando performance e SEO. Aprenda a criar projetos com Next.js, roteamento dinâmico, APIs internas e deployment.
+            <br /><br />
+            Tutorial ideal para quem já conhece React e quer avançar para projetos mais escaláveis e rápidos.
+        </p>
+        <a href="nextjs-introducao.html" class="btn-ver-mais">Ver tutorial completo</a>
+    </article>
+
+    <!-- Pode adicionar quantos artigos quiser aqui, com descrições longas e detalhadas -->
+
+</section>
+
+<footer>
+    <p>© 2025 Catálogo de Tutoriais. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Função simples para busca e filtro em tempo real no front-end
+    const campoBusca = document.getElementById('campoBusca');
+    const filtroCategoria = document.getElementById('filtroCategoria');
+    const listaTutoriais = document.getElementById('listaTutoriais');
+    const tutorials = listaTutoriais.querySelectorAll('.tutorial-item');
+
+    function filtrarTutoriais() {
+        const termoBusca = campoBusca.value.toLowerCase();
+        const categoriaSelecionada = filtroCategoria.value;
+
+        tutorials.forEach(tutorial => {
+            const titulo = tutorial.getAttribute('data-titulo').toLowerCase();
+            const categoria = tutorial.getAttribute('data-categoria');
+
+            const matchBusca = titulo.includes(termoBusca);
+            const matchCategoria = categoriaSelecionada === 'todos' || categoria === categoriaSelecionada;
+
+            if (matchBusca && matchCategoria) {
+                tutorial.style.display = '';
+            } else {
+                tutorial.style.display = 'none';
+            }
+        });
+    }
+
+    campoBusca.addEventListener('input', filtrarTutoriais);
+    filtroCategoria.addEventListener('change', filtrarTutoriais);
+</script>
+
+</body>
+</html>
