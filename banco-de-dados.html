@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Introdução a Banco de Dados: MySQL e MongoDB</title>
+    <link rel="stylesheet" href="cs.css" />
+</head>
+<body>
+
+<header>
+    <h1>Introdução a Banco de Dados: MySQL e MongoDB</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <p>
+            Bancos de dados são sistemas que armazenam e organizam dados para que possam ser consultados e manipulados eficientemente.
+        </p>
+
+        <h2>🗄️ Bancos de dados relacionais: MySQL</h2>
+        <p>
+            MySQL é um banco de dados relacional que organiza os dados em tabelas compostas por linhas e colunas.
+        </p>
+        <h3>Exemplo de tabela</h3>
+        <pre><code>
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    idade INT
+);
+        </code></pre>
+
+        <h3>Operações básicas (CRUD)</h3>
+        <ul>
+            <li><strong>Create:</strong> Inserir dados</li>
+            <pre><code>INSERT INTO usuarios (nome, email, idade) VALUES ('Ana', 'ana@email.com', 30);</code></pre>
+            <li><strong>Read:</strong> Consultar dados</li>
+            <pre><code>SELECT * FROM usuarios;</code></pre>
+            <li><strong>Update:</strong> Atualizar dados</li>
+            <pre><code>UPDATE usuarios SET idade = 31 WHERE nome = 'Ana';</code></pre>
+            <li><strong>Delete:</strong> Excluir dados</li>
+            <pre><code>DELETE FROM usuarios WHERE nome = 'Ana';</code></pre>
+        </ul>
+
+        <h2>📂 Bancos de dados não relacionais: MongoDB</h2>
+        <p>
+            MongoDB é um banco de dados NoSQL que armazena dados em documentos JSON flexíveis, ideais para aplicações com dados não estruturados.
+        </p>
+
+        <h3>Exemplo de documento</h3>
+        <pre><code>
+{
+  "_id": ObjectId("..."),
+  "nome": "Carlos",
+  "email": "carlos@email.com",
+  "idade": 28
+}
+        </code></pre>
+
+        <h3>Operações básicas (CRUD)</h3>
+        <ul>
+            <li><strong>Create:</strong> Inserir documento</li>
+            <pre><code>db.usuarios.insertOne({nome: "Carlos", email: "carlos@email.com", idade: 28});</code></pre>
+            <li><strong>Read:</strong> Consultar documentos</li>
+            <pre><code>db.usuarios.find();</code></pre>
+            <li><strong>Update:</strong> Atualizar documento</li>
+            <pre><code>db.usuarios.updateOne({nome: "Carlos"}, {$set: {idade: 29}});</code></pre>
+            <li><strong>Delete:</strong> Excluir documento</li>
+            <pre><code>db.usuarios.deleteOne({nome: "Carlos"});</code></pre>
+        </ul>
+
+        <h2>🧐 Quando usar cada tipo?</h2>
+        <p>
+            Use MySQL para dados estruturados, com relacionamentos claros. Use MongoDB para dados flexíveis e em constante evolução.
+        </p>
+        <p>
+            Com esse conhecimento, você pode escolher e começar a usar bancos de dados adequados para suas aplicações web.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Catálogo de Tutoriais. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

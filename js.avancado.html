@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Avançado: Promises, Async/Await e APIs</title>
+    <link rel="stylesheet" href="cs.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header,
+        footer {
+            background-color: #004080;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #004080;
+        }
+
+        main section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+            line-height: 1.6;
+        }
+
+        pre {
+            background: #eaeaea;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        a {
+            color: #004080;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript Avançado: Promises, Async/Await e APIs</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="tutoriais.html">Tutoriais</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>Este tutorial aborda conceitos avançados de JavaScript, focando em programação assíncrona usando
+                Promises, Async/Await e consumo de APIs REST.</p>
+
+            <h2>Promises</h2>
+            <p>Promises representam operações assíncronas que podem ser resolvidas (sucesso) ou rejeitadas (erro).
+                Exemplo básico:</p>
+            <pre><code>
+const promessa = new Promise((resolve, reject) =&gt; {
+  setTimeout(() =&gt; {
+    resolve("Sucesso!");
+  }, 2000);
+});
+
+promessa.then(resultado =&gt; {
+  console.log(resultado);
+}).catch(erro =&gt; {
+  console.error(erro);
+});
+        </code></pre>
+
+            <h2>Async/Await</h2>
+            <p>Async/Await permite escrever código assíncrono de forma mais legível, parecido com código síncrono:</p>
+            <pre><code>
+async function exemplo() {
+  try {
+    const resultado = await promessa;
+    console.log(resultado);
+  } catch (erro) {
+    console.error(erro);
+  }
+}
+exemplo();
+        </code></pre>
+
+            <h2>Consumindo APIs REST</h2>
+            <p>Exemplo usando <code>fetch</code> para obter dados de uma API:</p>
+            <pre><code>
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error("Erro:", error));
+        </code></pre>
+
+            <h2>Recomendações</h2>
+            <ul>
+                <li>Use <code>try/catch</code> para tratar erros com Async/Await.</li>
+                <li>Prefira Async/Await para código mais limpo.</li>
+                <li>Conheça bibliotecas como <code>axios</code> para requisições HTTP.</li>
+            </ul>
+
+            <h2>Links úteis</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Using_promises"
+                        target="_blank" rel="noopener">MDN - Usando Promises</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function"
+                        target="_blank" rel="noopener">MDN - Async Functions</a></li>
+                <li><a href="https://axios-http.com/ptbr/docs/intro" target="_blank" rel="noopener">Axios - Cliente
+                        HTTP</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Catálogo de Tutoriais. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

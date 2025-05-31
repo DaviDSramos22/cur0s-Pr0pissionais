@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Introdução ao HTML e sua importância</title>
+    <link rel="stylesheet" href="cs.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #222;
+        }
+        header, footer {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        code {
+            font-family: Consolas, monospace;
+            color: #c7254e;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Introdução ao HTML e sua importância</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>O que é HTML?</h2>
+        <p>
+            HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Ela estrutura o conteúdo da internet, definindo elementos como títulos, parágrafos, listas, imagens, links e muito mais.
+            Sem o HTML, os navegadores não saberiam como exibir textos, imagens ou vídeos que você vê em sites.
+        </p>
+        <p>
+            Diferente das linguagens de programação tradicionais que executam lógicas e cálculos, o HTML serve para organizar o conteúdo de forma semântica e hierárquica.
+        </p>
+    </section>
+
+    <section>
+        <h2>História do HTML</h2>
+        <p>
+            HTML foi criado em 1991 por Tim Berners-Lee, o inventor da World Wide Web. Desde então, a linguagem evoluiu muito, ganhando novas versões com mais recursos e padrões modernos.
+            A versão atual é o HTML5, que adicionou suporte a multimídia, gráficos vetoriais, APIs para armazenamento local, e muito mais.
+        </p>
+        <p>
+            Entender a história ajuda a compreender porque certas tags existem e como a linguagem se adapta às necessidades atuais da web.
+        </p>
+    </section>
+
+    <section>
+        <h2>Estrutura básica de um documento HTML</h2>
+        <p>Todo documento HTML possui uma estrutura básica, que inclui:</p>
+        <ul>
+            <li><strong>Doctype:</strong> informa ao navegador qual versão do HTML está sendo usada.</li>
+            <li><strong>Elementos raiz:</strong> <code>&lt;html&gt;</code>, que contém todo o conteúdo.</li>
+            <li><strong>Cabeçalho:</strong> <code>&lt;head&gt;</code>, com informações que não aparecem diretamente, como título e links para estilos.</li>
+            <li><strong>Corpo:</strong> <code>&lt;body&gt;</code>, onde fica o conteúdo visível da página.</li>
+        </ul>
+        <p>Exemplo de estrutura mínima:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Minha primeira página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é meu primeiro documento HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Principais tags e seus usos</h2>
+        <p>Vamos conhecer algumas das tags mais importantes no HTML:</p>
+        <ul>
+            <li><code>&lt;h1&gt; a &lt;h6&gt;</code>: Cabeçalhos, usados para títulos e subtítulos, organizando hierarquicamente o conteúdo.</li>
+            <li><code>&lt;p&gt;</code>: Parágrafos de texto.</li>
+            <li><code>&lt;a&gt;</code>: Links para outras páginas ou recursos.</li>
+            <li><code>&lt;img&gt;</code>: Inserção de imagens.</li>
+            <li><code>&lt;ul&gt; e &lt;ol&gt;</code>: Listas não ordenadas (com marcadores) e ordenadas (numeradas).</li>
+            <li><code>&lt;div&gt;</code>: Divisões genéricas para agrupar elementos.</li>
+            <li><code>&lt;span&gt;</code>: Para estilização ou marcação inline.</li>
+            <li><code>&lt;form&gt;</code>: Formulários para interação com o usuário.</li>
+        </ul>
+        <p>Exemplo com algumas tags:</p>
+        <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;p&gt;Este é um parágrafo com um &lt;a href="https://www.example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Semântica no HTML</h2>
+        <p>A semântica diz respeito ao significado das tags usadas. Usar tags semânticas ajuda navegadores e ferramentas (como leitores de tela e motores de busca) a entender melhor o conteúdo.</p>
+        <p>Exemplos de tags semânticas:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code>: Cabeçalho da página ou seção.</li>
+            <li><code>&lt;nav&gt;</code>: Navegação principal.</li>
+            <li><code>&lt;main&gt;</code>: Conteúdo principal da página.</li>
+            <li><code>&lt;article&gt;</code>: Conteúdo independente, como artigos e postagens.</li>
+            <li><code>&lt;section&gt;</code>: Seção genérica do conteúdo.</li>
+            <li><code>&lt;footer&gt;</code>: Rodapé da página ou seção.</li>
+        </ul>
+        <p>Exemplo de uso semântico:</p>
+        <pre><code>&lt;header&gt;
+    &lt;h1&gt;Meu Site&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Início&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="sobre.html"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Título do artigo&lt;/h2&gt;
+        &lt;p&gt;Texto do artigo...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;Rodapé aqui&lt;/p&gt;
+&lt;/footer&gt;
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Boas práticas no uso de HTML</h2>
+        <p>Para garantir páginas acessíveis, organizadas e fáceis de manter, siga estas recomendações:</p>
+        <ul>
+            <li>Use sempre tags semânticas em vez de apenas <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code>.</li>
+            <li>Adicione atributos <code>alt</code> descritivos em imagens para acessibilidade.</li>
+            <li>Estruture o conteúdo com cabeçalhos de forma hierárquica (não pule níveis).</li>
+            <li>Mantenha o código limpo e indentado.</li>
+            <li>Valide seu código com o <a href="https://validator.w3.org/" target="_blank" rel="noopener">Validador W3C</a>.</li>
+            <li>Separe estilos CSS e scripts JavaScript em arquivos externos.</li>
+            <li>Evite tags e atributos obsoletos.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Ferramentas para aprender e desenvolver HTML</h2>
+        <p>Existem muitas ferramentas gratuitas que podem ajudar no aprendizado e desenvolvimento em HTML:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs</a> — Documentação oficial e tutoriais completos.</li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools</a> — Plataforma com exemplos e editor online.</li>
+            <li><a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> — Ambiente online para testar e compartilhar código HTML, CSS e JS.</li>
+            <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/" target="_blank" rel="noopener">freeCodeCamp</a> — Curso interativo e gratuito.</li>
+            <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">Validador W3C</a> — Para checar se seu HTML está correto.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Resumo e próximos passos</h2>
+        <p>
+            O HTML é a base de toda página web e o primeiro passo para quem quer entrar no desenvolvimento web. Entender sua estrutura e funcionamento é essencial para seguir aprendendo CSS, JavaScript e outras tecnologias.
+        </p>
+        <p>
+            Pratique criando páginas simples, explore a semântica e valide seu código regularmente. Depois, continue com tutoriais de CSS para aprender a estilizar e de JavaScript para adicionar interatividade.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Tutorial HTML. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
