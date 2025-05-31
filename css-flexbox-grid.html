@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Layout Responsivo com CSS Flexbox e Grid</title>
+    <link rel="stylesheet" href="cs.css" />
+    <style>
+        /* Exemplos básicos para demonstração */
+        .container-flex {
+            display: flex;
+            gap: 10px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .item-flex {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .container-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .item-grid {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Layout Responsivo com CSS Flexbox e Grid</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <p>
+            Aprenda a construir layouts flexíveis e responsivos utilizando as poderosas ferramentas do CSS: Flexbox e Grid. Esses módulos facilitam a organização e o alinhamento dos elementos em sua página, tornando o design adaptável a diferentes dispositivos.
+        </p>
+
+        <h2>📐 CSS Flexbox</h2>
+        <p>
+            Flexbox é um modelo de layout unidimensional que organiza elementos em linha ou coluna, distribuindo espaço entre eles de forma eficiente.
+        </p>
+
+        <h3>Exemplo básico de Flexbox</h3>
+        <div class="container-flex">
+            <div class="item-flex">Item 1</div>
+            <div class="item-flex">Item 2</div>
+            <div class="item-flex">Item 3</div>
+        </div>
+
+        <p>
+            Algumas propriedades importantes:
+        </p>
+        <ul>
+            <li><code>display: flex;</code> - define um container flexível;</li>
+            <li><code>flex-direction</code> - define a direção dos itens (linha ou coluna);</li>
+            <li><code>justify-content</code> - alinha os itens horizontalmente;</li>
+            <li><code>align-items</code> - alinha os itens verticalmente;</li>
+            <li><code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code> controlam o tamanho dos itens.</li>
+        </ul>
+
+        <h2>🧱 CSS Grid</h2>
+        <p>
+            CSS Grid é um sistema de layout bidimensional que permite organizar elementos em linhas e colunas, oferecendo maior controle para designs complexos.
+        </p>
+
+        <h3>Exemplo básico de Grid</h3>
+        <div class="container-grid">
+            <div class="item-grid">A</div>
+            <div class="item-grid">B</div>
+            <div class="item-grid">C</div>
+            <div class="item-grid">D</div>
+            <div class="item-grid">E</div>
+        </div>
+
+        <p>
+            Propriedades principais:
+        </p>
+        <ul>
+            <li><code>display: grid;</code> - define um container grid;</li>
+            <li><code>grid-template-columns</code> e <code>grid-template-rows</code> - definem o tamanho das colunas e linhas;</li>
+            <li><code>gap</code> - espaçamento entre células;</li>
+            <li><code>grid-column</code> e <code>grid-row</code> - posicionam os itens;</li>
+            <li><code>auto-fit</code> e <code>minmax()</code> ajudam a criar grids responsivos.</li>
+        </ul>
+
+        <h2>📱 Flexbox vs Grid</h2>
+        <p>
+            Use Flexbox para layouts lineares simples (uma direção). Use Grid para layouts mais complexos que envolvam linhas e colunas simultaneamente. Em muitos projetos, ambos são usados juntos para aproveitar o melhor dos dois.
+        </p>
+
+        <h2>📚 Exercícios recomendados</h2>
+        <ul>
+            <li>Crie um menu de navegação horizontal usando Flexbox.</li>
+            <li>Construa uma galeria de imagens responsiva com Grid.</li>
+            <li>Experimente combinar Flexbox e Grid para um layout de página completo.</li>
+        </ul>
+
+        <p>
+            Com esses conceitos, seus sites ficarão visualmente organizados e adaptáveis a diferentes dispositivos, melhorando a experiência do usuário.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Catálogo de Tutoriais. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

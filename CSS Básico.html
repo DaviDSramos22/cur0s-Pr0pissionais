@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Básico: Estilizando suas páginas web</title>
+    <link rel="stylesheet" href="cs.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #004080;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #004080;
+        }
+
+        pre {
+            background-color: #eef;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: #eef;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CSS Básico: Estilizando suas páginas web</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <p>Aprenda como transformar páginas HTML simples em sites visualmente bonitos e profissionais com CSS.</p>
+</header>
+
+<main>
+    <section>
+        <h2>📌 O que é CSS?</h2>
+        <p>CSS (Cascading Style Sheets) é a linguagem usada para definir a aparência de elementos HTML. Ele controla as cores, fontes, espaçamento, alinhamento, layout e muito mais.</p>
+        <p>Com o CSS, você separa o conteúdo da apresentação, tornando seu site mais organizado, reutilizável e fácil de manter.</p>
+    </section>
+
+    <section>
+        <h2>📎 Formas de aplicar CSS</h2>
+        <ul>
+            <li><strong>Inline:</strong> Dentro de uma tag HTML, usando o atributo <code>style</code>.</li>
+            <li><strong>Interno:</strong> Dentro da tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code>.</li>
+            <li><strong>Externo:</strong> Arquivo separado com extensão <code>.css</code> (recomendado).</li>
+        </ul>
+
+        <h3>Exemplo de CSS Inline:</h3>
+        <pre><code>&lt;p style="color: red;"&gt;Texto em vermelho&lt;/p&gt;</code></pre>
+
+        <h3>Exemplo de CSS Interno:</h3>
+        <pre><code>&lt;style&gt;
+    h1 {
+        color: blue;
+        font-size: 32px;
+    }
+&lt;/style&gt;
+</code></pre>
+
+        <h3>Exemplo de CSS Externo:</h3>
+        <p>Crie um arquivo chamado <code>estilos.css</code> e adicione:</p>
+        <pre><code>body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}</code></pre>
+        <p>No seu HTML, conecte-o com:</p>
+        <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>🎨 Propriedades mais comuns do CSS</h2>
+        <ul>
+            <li><code>color</code> – cor do texto</li>
+            <li><code>background-color</code> – cor de fundo</li>
+            <li><code>font-size</code> – tamanho da fonte</li>
+            <li><code>margin</code> – espaço externo</li>
+            <li><code>padding</code> – espaço interno</li>
+            <li><code>border</code> – borda dos elementos</li>
+            <li><code>width / height</code> – largura e altura</li>
+            <li><code>text-align</code> – alinhamento do texto</li>
+            <li><code>display</code> – tipo de layout (block, inline, flex...)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🔧 Seletores CSS</h2>
+        <p>Seletores indicam quais elementos devem receber os estilos. Exemplos:</p>
+        <ul>
+            <li><code>h1</code> – seleciona todas as tags &lt;h1&gt;</li>
+            <li><code>.classe</code> – seleciona todos os elementos com a classe</li>
+            <li><code>#id</code> – seleciona um elemento com o ID específico</li>
+            <li><code>div p</code> – parágrafos dentro de divs</li>
+        </ul>
+        <pre><code>/* Exemplo */
+#menu {
+    background-color: #004080;
+    color: white;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>📏 Box Model (Modelo de Caixa)</h2>
+        <p>No CSS, todo elemento é considerado uma caixa com 4 partes:</p>
+        <ul>
+            <li><strong>Content:</strong> conteúdo do elemento</li>
+            <li><strong>Padding:</strong> espaço entre conteúdo e borda</li>
+            <li><strong>Border:</strong> borda ao redor do padding</li>
+            <li><strong>Margin:</strong> espaço externo entre elementos</li>
+        </ul>
+        <pre><code>.exemplo {
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 20px;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>📐 Layouts com Flexbox e Grid (Introdução)</h2>
+        <p>CSS moderno inclui ferramentas como <strong>Flexbox</strong> e <strong>Grid</strong> para criar layouts avançados.</p>
+
+        <h3>Flexbox:</h3>
+        <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}</code></pre>
+
+        <h3>Grid:</h3>
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>✅ Boas práticas com CSS</h2>
+        <ul>
+            <li>Use arquivos externos para organização.</li>
+            <li>Use classes descritivas: <code>.menu-principal</code>, <code>.botao-enviar</code>.</li>
+            <li>Evite o uso excessivo de IDs no CSS.</li>
+            <li>Evite repetir estilos. Reutilize classes.</li>
+            <li>Comente seu código: <code>/* Explicação */</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📚 Links úteis para aprofundar</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">Documentação oficial CSS (MDN)</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks (Dicas e tutoriais)</a></li>
+            <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy (jogo para aprender Flexbox)</a></li>
+            <li><a href="https://web.dev/learn/css/" target="_blank">Curso gratuito "Learn CSS" - web.dev</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Catálogo de Tutoriais. Desenvolvido com dedicação para quem está começando na web.</p>
+</footer>
+
+</body>
+</html>
